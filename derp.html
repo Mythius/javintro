@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body>
+        <h2>Room of BUTTONS!</h2>
+        <p>This is Just one of dem buttons u can click</p>
+        <button id="myBtn">Ddepr>Q!</button><button id="mysBtn">HOI</button>
+        <button id="mytBtn">:)</button><button id="myfBtn">CHHOMPE</button>
+        <button id="notoc">???</button>
+        <button id="rst">Reset</button><input placeholder="Insert Comment"><button id ="ent">Enter</button> 
+        <script>
+            function get(id){return document.getElementById(id);};
+            var x = get("myBtn"); /*I think these are sprites?*/
+            var y = get("mysBtn");
+            var z = get("mytBtn"); 
+            var a = get("myfBtn");
+            var r = get("rst");
+            var n = get("notoc");
+            var e = get("ent");
+            x.addEventListener("click", ff);
+            y.addEventListener("click", fs);
+            z.addEventListener("click", ft); 
+            a.addEventListener("click", fr);
+            r.addEventListener("click", re);
+            n.addEventListener("mouseover", nf);
+            n.addEventListener("mouseout", nof);
+            n.addEventListener("click", noc);
+            e.addEventListener("click", ent);
+            function ff(){
+                get("demo").innerHTML += "You Clicked The Button!<br>"};
+            function fs(){
+                get("demo").innerHTML += "You Did Nothing<br>";
+                alert('Warning: You Did Nothing');};
+            function ft(){
+                get("demo").innerHTML += "IM Bored<br>"};
+            function fr(){
+                get("demo").innerHTML += "there is no spoon...<br>"};
+            function re(){
+                get("demo").innerHTML = ""};
+            function nf(){
+                get("demoA").innerHTML = "GET YOUR DIRTY MOUSE OFF ME NOW!!!<br>"};
+            function nof(){
+                get("demoA").innerHTML = ""};
+            function noc(){
+                get("demoA").innerHTML = "OUCH! Y U DO DAT?<br>"};
+            function ent(){
+                alert('Invalid Comment');};
+        </script>
+        <a href="http://www.google.com">Google.com</a>
+        <p id="demoA"></p>
+        <p id="demo"></p>
+    </body>
+</html>
