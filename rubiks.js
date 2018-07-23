@@ -62,7 +62,7 @@ $(document).ready(function(){
 			var head = document.getElementsByTagName('head')[0];
 			var js = document.createElement("script");
 			js.type = "text/javascript";
-			js.src = "/wp-content/themes/blankwiki/roofpig-3d/roofpig_and_three.min.js";
+			js.src = "https://ruwix.com/wp-content/themes/blankwiki/roofpig-3d/roofpig_and_three.min.js";
 			head.appendChild(js);
 		}
     }, 100);
