@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            div{
+                height: 500px;
+                width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .roofpig-help-button{
+                height: 0px;
+                width: 0px;
+            }
+            body{
+                text-align: center;
+                position: bottom;
+            }
+        </style>
+    </head>
+    <body>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script src='https://rawgit.com/Mythius/javintro/master/rubiks.js'></script>
+        <div id=solver class="roofpig width150 inlineblock" data-config="alg=D B F' L2 U' L F' R2 U2 L' F' L' U2 L2 B2 U2 L D2 F' D2 F' U' R L' F'|colored=u f l r d b|hover=1|speed=200|flags=showalg|colors=U:y F:b R:r B:g L:o D:w"></div>
+        <br>
+        <input min=0 max=300 value=200 id=slider type=range>
+        <script>
+            function obj(id){return document.getElementById(id);}
+            function setSpeed(){
+                var att = obj('solver').getAttribute('data-config').replace(/speed=[0-9]*\|/gm,'speed='+obj('slider').value+'|');
+                obj('solver').setAttribute('data-config',att);
+                requestAnimationFrame(setSpeed);
+            }
+            setSpeed();
+                
+            
+        </script>
+    </body>
+</html>
