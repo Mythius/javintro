@@ -20,18 +20,24 @@
     <body>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
         <script src='https://rawgit.com/Mythius/javintro/master/rubiks.js'></script>
+        <input id=alg>
+        <button id=add>Add+</button>
         <div id=solver class="roofpig width150 inlineblock" data-config="alg=F D' R U2 B F L' B2 R' L2 F' R2 B U2 B U|colored=u f l r d b|hover=1|speed=200|flags=showalg|colors=U:y F:b R:r B:g L:o D:w"></div>
-        <br>
-        <input min=0 max=300 value=200 id=slider type=range>
         <script>
             function obj(id){return document.getElementById(id);}
-            function setSpeed(){
-                var att = obj('solver').getAttribute('data-config').replace(/speed=[0-9]*\|/gm,'speed='+obj('slider').value+'|');
-                obj('solver').setAttribute('data-config',att);
-                requestAnimationFrame(setSpeed);
+            obj('add').addEventListener('click',addDiv);
+            var div = document.createElement('div');
+            div.class='roofpig width150 inlineblock'
+            
+            function addDiv(){
+                var a = obj('alg').value.replace(\[/(/)/[/]/{/}]\gm,'');
+                div.setAtrribute('data-config','alg='+a+"|colored=u f l r d b|hover=1|speed=200|flags=showalg|colors=U:y F:b R:r B:g L:o D:w");                
+                document.body.appendChild(div);  
             }
-            setSpeed();
+       
                 
+            
+            
             
         </script>
     </body>
