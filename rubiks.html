@@ -32,7 +32,8 @@
             function addDiv(){
                 var a = obj('alg').value.replace(\[/(/)/[/]/{/}]\gm,'');
                 div.setAtrribute('data-config','alg='+a+"|colored=u f l r d b|hover=1|speed=200|flags=showalg|colors=U:y F:b R:r B:g L:o D:w");                
-                document.body.appendChild(div);  
+                document.body.appendChild(div);
+                obj ('alg').value='';                                 
             }
        
                 
